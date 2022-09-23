@@ -1,0 +1,14 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "declarationDir": "dist",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "typeRoots": ["./types", "./node_modules/@types"]
+  },
+  "files": ["src/throwjs-react-list.tsx"],
+  "include": ["src/**/*", "./types/**.d.ts"],
+  "exclude": ["src/**/*.test*"]
+}
