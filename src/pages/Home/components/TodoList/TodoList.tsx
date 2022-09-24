@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import "./TodoList.scss";
-import todoStore, { ITodo } from "@throwjs/store";
-import { TodoItem } from "../TodoItem";
+import React, { useEffect, useState } from 'react';
+import './TodoList.scss';
+import { ITodo, storeTodo } from '@throwjs/store';
+import { TodoItem } from '../TodoItem';
 
 export interface TodoListInterface {}
 
@@ -9,7 +9,7 @@ const TodoList: React.FC<TodoListInterface> = () => {
   const [todos, setTodos] = useState<ITodo[]>([]);
 
   useEffect(() => {
-    const subscription = todoStore.storeTodo$.subscribe((todos) => {
+    const subscription = storeTodo.storeTodo$.subscribe((todos) => {
       setTodos(todos);
     });
 

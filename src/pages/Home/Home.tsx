@@ -1,6 +1,6 @@
-import React from "react";
-import "./Home.scss";
-import { TodoList } from "@/pages/Home/components";
+import React from 'react';
+import './Home.scss';
+import { TodoList } from '@/pages/Home/components';
 
 export interface HomeInterface {}
 
