@@ -1,5 +1,5 @@
-declare module "@throwjs/store" {
-  import { Observable } from "rxjs";
+declare module '@throwjs/store' {
+  import { Observable } from 'rxjs';
   export interface ITodo {
     id: number;
     text: string;
@@ -8,6 +8,7 @@ declare module "@throwjs/store" {
   class StoreTodo {
     private _storeTodo$;
     private _id;
+    private _key;
     constructor();
     get storeTodo$(): Observable<ITodo[]>;
     get id(): number;
@@ -15,7 +16,8 @@ declare module "@throwjs/store" {
     changeCompleted(id: number): void;
     deleteTodo(id: number): void;
     private todos;
+    private saveInLocalStorage;
+    private getFromLocalStorage;
   }
-  const storeTodo: StoreTodo;
-  export default storeTodo;
+  export const storeTodo: StoreTodo;
 }
