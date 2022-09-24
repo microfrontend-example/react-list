@@ -20,9 +20,11 @@ const TodoList: React.FC<TodoListInterface> = () => {
 
   return (
     <ul className="TodoList">
-      {todos.map((todo) => (
-        <TodoItem key={todo.id} {...todo} />
-      ))}
+      {todos.length ? (
+        todos.map((todo) => <TodoItem key={todo.id} {...todo} />)
+      ) : (
+        <div>No data</div>
+      )}
     </ul>
   );
 };
