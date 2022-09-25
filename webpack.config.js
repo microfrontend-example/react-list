@@ -32,5 +32,6 @@ module.exports = (webpackConfigEnv, argv) => {
         '@': path.resolve(__dirname, 'src'),
       },
     },
+    externals: ['single-spa'],
   });
 };
